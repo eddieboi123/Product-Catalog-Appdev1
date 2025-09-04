@@ -1,7 +1,21 @@
-body{
-    height: 100dvh;
-    width: 100dvw;
-    background-image: url(bg.jpg);
-    margin: 0;
-    padding: 0;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('bg.jpg'); /* ✅ note the leading slash */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
 }
+
+.container {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  
+}
+
+
+

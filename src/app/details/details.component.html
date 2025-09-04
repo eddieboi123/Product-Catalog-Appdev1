@@ -1,0 +1,48 @@
+<div *ngIf="product" class="container mt-4">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body p-4">
+      <!-- Product Title -->
+      <h2 class="card-title text-center mb-3">{{ product.name }}</h2>
+      <h6 class="text-muted text-center">ID: {{ product.id }}</h6>
+
+      <!-- Product Details -->
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Brand:</strong> {{ product.brand }}
+            </li>
+            <li class="list-group-item">
+              <strong>Price:</strong> ${{ product.price }}
+            </li>
+            <li class="list-group-item">
+              <strong>Location:</strong> {{ product.location }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded">
+            <h5>Description</h5>
+            <p class="mb-0">{{ product.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div *ngIf="product.features?.length" class="mt-4">
+        <h5>Features:</h5>
+        <ul class="list-group">
+          <li *ngFor="let feature of product.features" class="list-group-item">
+            ✅ {{ feature }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Back Button -->
+      <div class="text-center mt-4">
+        <a class="btn btn-success px-4" [routerLink]="['/products']">⬅ Go Back</a>
+      </div>
+    </div>
+  </div>
+</div>

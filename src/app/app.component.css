@@ -2,14 +2,11 @@ a:hover{
     border: 1px solid skyblue;
 }
 
-img{
-    background-image: url(bg.jpg);
-    filter: blur(1px);
-    z-index: -1;
-}
+
 
 body {
     margin: 0;
     padding: 0;
+    
 }
 

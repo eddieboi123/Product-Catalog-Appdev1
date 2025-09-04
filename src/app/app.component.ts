@@ -11,10 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  products = [
-    {id: 1, name: "cherry mobile", price: 1249.0, location: "SM Tarlac"},
-    {id: 1, name: "cherry mobile", price: 1249.0, location: "SM Tarlac"},
-    {id: 1, name: "cherry mobile", price: 1249.0, location: "SM Tarlac"},
-    {id: 1, name: "cherry mobile", price: 1249.0, location: "SM Tarlac"},
+ products = [
+    {id: 1, name: "POCO X6", price: 250, location: "SM Tarlac", brand: "POCO"},
+    {id: 2, name: "POCO X7 PRO", price: 359, location: "SM BAGUIO", brand: "POCO"},
+    {id: 3, name: "POCO F7", price: 530, location: "AMAZON", brand: "POCO"},
   ];
 }
